@@ -1,8 +1,8 @@
 # Cloud synchronization for wallets
 
 - Author: Jonas Schneider, esatus AG - j.schneider@esatus.com
-- Date: 2021-02-24
-- Status: in process, not published
+- Date: 2021-03-12
+- Status: in process
 
 This document discribes a concept for synchronization of wallet applications in Hyperledger Aries via cloud. In addition to that, the folder Prototyp contains a best practice implementation of the concept.
 
