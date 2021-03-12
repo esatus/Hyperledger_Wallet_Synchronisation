@@ -30,7 +30,7 @@ The concept provides a solution for synchronization via cloud services. The user
 The following sections describe the concept. Three files are stored on the cloud, which are needed for synchronization. The first file is the SQLite database file, which contains the wallet data. In addition, the agent options are serialized in JSON notation and stored encrypted on the cloud. The last file contains a hash list which is used to prevent inconsistencies. This is described in more detail in the sections [Initialization](#initialization) and [Synchronization](#synchronization).\
 The data model is also illustrated in the following figure.
 
-![Data model](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/edit/main/img/data_on_cloud.PNG "Data model")
+![Data model](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/blob/main/img/Data_on_cloud.PNG "Data model")
 
 ### Initialization
 
@@ -52,14 +52,14 @@ The process of synchronization starts with the generation of the hash value of t
 If the value does not exist in the list, there are unsynchronized changes on the local database. These changes must be consolidated with the database file on the cloud. After the consolidation, the new database file must be uploaded on the cloud and a new hash value of this state must be added to the hash list.\
 The process is also illustrated in the figure below.
 
-![Synchronization process](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/edit/main/img/Sync_at_Start.PNG "Synchronization process")
+![Synchronization process](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/blob/main/img/Sync_at_Start.PNG "Synchronization process")
 
 #### Synchronization at changes
 
 If a wallet application makes changes, they must be synchronized. Before these changes are made, a hash value off the local database file must be generated. After the changes (e.g., issuing credentials) have been executed, they must be synchronized with the cloud. For this purpose, the last value from the hash list is compared with the hash value that was generated before the changes were made. If both hash values are identical, the database which is containing the changes can be updated to the cloud and a new hash value added to the list. If the hash values are different, the changes must be consolidated with the data off the database file on the cloud, before updating the cloud. The states should be consolidated after changes are made so it reduce the interruption of the user interaction.\
 The process is also illustrated in the figure below.
 
-![Synchronization process](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/edit/main/img/Sync_at_changes.PNG "Synchronization process")
+![Synchronization process](https://github.com/esatus/Hyperledger_Wallet_Synchronisation/blob/main/img/Sync_at_changes.PNG "Synchronization process")
 
 ## Conclusion
 
