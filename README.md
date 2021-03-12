@@ -4,7 +4,7 @@
 - Date: 2021-02-24
 - Status: in process, not published
 
-This document discribes a concept for synchronization of wallet applications in Hyperledger Aries via cloud.
+This document discribes a concept for synchronization of wallet applications in Hyperledger Aries via cloud. In addition to that, the folder Prototyp contains a best practice implementation of the concept.
 
 ## Table of Contents <!-- omit in toc -->
 
