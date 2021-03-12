@@ -64,11 +64,11 @@ namespace esatusWallet.Services
             {
                 CloudConfig cloudConfig = new CloudConfig();
                 cloudConfig.provider = CloudConfig.Provider.WebDav;
-                cloudConfig.uri = "https://jspi.hopto.org/owncloud/remote.php/";
-                cloudConfig.username = "WalletBackup";
-                cloudConfig.password = "MasterHda!";
-                cloudConfig.pathToDir = "webdav/CredentialBackup/";
-                cloudConfig.encryptionKey = "SecretKeyForAgentKontext";
+                cloudConfig.uri = "https://example.org/webdav/remote.php/";
+                cloudConfig.username = "Username";
+                cloudConfig.password = "Password";
+                cloudConfig.pathToDir = "Path/To/Dir";
+                cloudConfig.encryptionKey = "SecretKeyForAgentContext";
 
                 return cloudConfig;
             }
