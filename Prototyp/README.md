@@ -4,7 +4,7 @@
 - Date: 2021-03-12
 - Status: in process
 
-This folder contains a best practice implementaion of the concept.
+This directory contains a best practice implementaion of the concept.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -13,11 +13,11 @@ This folder contains a best practice implementaion of the concept.
 
 ## File description
 
-The best practice implementaion contains a set of classes and interfaces which are needed for the synchronization. The following part discribes the files.
+The best practice implementation contains a set of classes and interfaces which are needed for the synchronization. The following part describes the files.
 
-**CloudSyncService.cs** - The CloudSyncService.cs class is containing the algorithm for the synchronization. For initilize or start the synchronization, there two functions which can be called (see [Integration](#Integration)).
+**CloudSyncService.cs** - The CloudSyncService.cs class is containing the algorithm for the synchronization. For initializing or starting the synchronization, there are two functions which can be called (see [Integration](#Integration)).
 
-**Interfaces/ISyncService.cs** - Because of the diffrent APIs for all cloud providers, we need an extra implementation for all of them. The ISyncService.cs file contains an interface with all functions which are needed from the CloudSyncService class for the synchronization. The API implementations extend from the interface and have to contain the functions. An implementation of the WebDav API is shown in the Classes/WebdavSyncService.cs file.
+**Interfaces/ISyncService.cs** - Because of the different APIs for all cloud providers, we need an extra implementation for all of them. The ISyncService.cs file contains an interface with all functions which are needed from the CloudSyncService class for the synchronization. The API implementations extend from the interface and must contain the functions. An implementation of the WebDav API is shown in the Classes/WebdavSyncService.cs file.
 
 **Classes/WebdavSyncService.cs** - This file contains a WebDav API implementation. This can be used to integrate cloud solutions like OwnCloud and Nextcloud.
 
@@ -29,7 +29,7 @@ The best practice implementaion contains a set of classes and interfaces which a
 
 For integrating the synchronisation in the wallet implementation, you can use the CloudSyncService class. There are two important functions which can be used.
 
-**Initialize(InitialisationType type)** - This function can be called for initialize the syncronization. The parameter InitialisationType decides wether an other application allready initilized the cloud files or not. An exaple integration of the function is shown in the following code block.
+**Initialize(InitialisationType type)** - This function can be called for initialize the synchronization. The parameter InitialisationType decides whether another application already initialized the cloud files or not. An example integration of the function is shown in the following code block.
 
 ```cs
 void SetCloudService(){
@@ -39,7 +39,7 @@ void SetCloudService(){
 }
 ```
 
-**Synchronize(SynchrisationType type)** - This function starts a synchronization process. As described in the paper, their are two types of synchronization, at start and when make changes. The parameter can be used to decide which type will be executed. The following to code blocks shows examples of both synchronization types.
+**Synchronize(SynchrisationType type)** - This function starts a synchronization process. As described in the paper, there are two types of synchronization, at start and when make changes. The parameter can be used to decide which type will be executed. The following to code blocks shows examples of both synchronization types.
 
 ```cs
 //Synchronisation at application start
