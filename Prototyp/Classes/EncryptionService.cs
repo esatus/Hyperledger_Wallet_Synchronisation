@@ -8,7 +8,9 @@ namespace esatusWallet.Services
 {
     class EncryptionService
     {
-        //https://mikaelkoskinen.net/post/encrypt-decrypt-string-asp-net-core
+        // Code was copied from the following web page:
+        // https://mikaelkoskinen.net/post/encrypt-decrypt-string-asp-net-core
+        
         public static string Encrypt(string value, string keyValue)
         {
             if (string.IsNullOrEmpty(value)) return value;
